@@ -16,24 +16,24 @@ import {RGBELoader} from "three/addons/loaders/RGBELoader.js"
 
 
 
-const rbgeLoader = new RGBELoader()
+// const rbgeLoader = new RGBELoader()
 
 
 
 
-//HDR  - RBGE - EQUIRECTANGULAR
+// //HDR  - RBGE - EQUIRECTANGULAR
 
-rbgeLoader.load("/environmentMaps/2/2k.hdr",
-(environmentMap)=>
-{
-       environmentMap.mapping = THREE.EquirectangularReflectionMapping
+// rbgeLoader.load("/environmentMaps/2/2k.hdr",
+// (environmentMap)=>
+// {
+//        environmentMap.mapping = THREE.EquirectangularReflectionMapping
     
 
-   scene.environment = environmentMap
-    scene.background = environmentMap
+//    scene.environment = environmentMap
+//     scene.background = environmentMap
 
- } 
- )
+//  } 
+//  )
 
 
 /**
@@ -168,8 +168,6 @@ const moonMaterial = new THREE.ShaderMaterial({
     uniforms:
     {
         uDayTexture: new THREE.Uniform(moonDayTexture),
-        
-        
         uSunDirection: new THREE.Uniform(new THREE.Vector3(0, 0, 1)),
         
         
